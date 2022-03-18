@@ -5,6 +5,10 @@
 
 // add your tests here
 
-TEST_CASE("Divisibility Base Cases") {
+TEST_CASE("removeLeadingSpaces Test Cases") {
   CHECK(removeLeadingSpaces("       int x = 1;  ") == "int x = 1;  ");
+}
+
+TEST_CASE("Count Characters Test Cases") {
+  CHECK(countChar("abcdef",'a') == 1);
 }

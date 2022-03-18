@@ -11,3 +11,13 @@ std::string removeLeadingSpaces(std::string line) {
   std::string result = line.substr(i,line.size());
   return result;
 }
+
+int countChar(std::string line, char c) {
+  int count = 0;
+  for (int i = 0;i < line.size();i++) {
+    if (line[i] == c) {
+      count += 1;
+    }
+  }
+  return count;
+}
