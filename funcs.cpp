@@ -54,3 +54,12 @@ int unindent(std::string filename) {
   outputfile.close();
   return 0;
 }
+
+int printFile(std::string filename) {
+  std::ifstream filein(filename);
+  for (std::string line; std::getline(filein, line);)
+  {
+    std::cout << line << std::endl;
+  }
+  return 0;
+}
