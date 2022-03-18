@@ -6,9 +6,9 @@
 
 * GitHub username: henryfan03
 
-* Notes:
-
-
+* Notes: The original bad code file is the one thats given, my program will take it, modify it, and output it into a new file named good-code.cpp, it will also
+show this in the main function when called as well. I used doctest and my makefile has a target for it, note that there are only two cases, it is to test the
+two functions that are talked about in the LAB 7 assignment page (that being removing the indents and character counting)
   
 * General instructions:
 - Fill in your name and GitHub username on top.
