@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include <ifstream>
-#include <ofstream>
+#include <fstream>
 #include <vector>
 
 std::string removeLeadingSpaces(std::string line) {
@@ -35,7 +34,7 @@ std::string indentline(std::string line,int count) {
 }
 
 int unindent(std::string filename) {
-  vector<std::string> newlines;
+  std::vector<std::string> newlines;
   int indentcount = 0;
   std::string newline;
   std::ifstream filein(filename);
@@ -45,12 +44,12 @@ int unindent(std::string filename) {
     newline = indentline(newline,indentcount);
     indentcount += countChar(newline,'{');
     indentcount -= countChar(newline,'}');
-    newlines.push_back();
+    newlines.push_back(newline);
   }
   filein.close();
   std::ofstream outputfile("good-code.cpp");
   for (int i = 0;i < newlines.size();i++) {
-    outputfile << newfiles << "\n";
+    outputfile << newlines[i] << "\n";
   }
   outputfile.close();
   return 0;
