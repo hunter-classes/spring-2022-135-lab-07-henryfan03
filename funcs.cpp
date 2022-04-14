@@ -6,7 +6,7 @@
 std::string removeLeadingSpaces(std::string line) {
   // int spaces = 0;
   int i = 0;
-  while(line[i] == ' ') {
+  while(isspace(line[i])) {
     // spaces += 1;
     i += 1;
   }
